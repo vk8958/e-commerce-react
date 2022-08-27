@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css';
 import { HeartIcon, ShoppingCartIcon, StarIcon } from '@heroicons/react/solid';
+import { Link } from 'react-router-dom';
 
 const Card = ({ item }) => {
     console.log("sdsdsd", item);
@@ -12,7 +13,10 @@ const Card = ({ item }) => {
                 </button>
 
                 <div className={styles.cardHeader}>
-                    <img className={styles.cardImg} src={item.image} />
+                    <Link to={`product/${item.id}`}>
+                        <img className={styles.cardImg} src={item.image} />
+                    </Link>
+                    
                 </div>
 
                 <div className={styles.cardBody}>
