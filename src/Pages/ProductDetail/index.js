@@ -8,6 +8,7 @@ const ProductDetail = () => {
     const { product_id } = useParams();
     const { product, setProductId, loading } = useProduct();
     console.log("product",product);
+    console.log(product_id);
     useEffect(() => {
         setProductId(product_id);
     }, [product_id]);

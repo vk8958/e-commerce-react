@@ -13,6 +13,7 @@ export const ProductContextProvider = ({children}) =>{
     const [productId,setProductId] = useState("");
     const [categories,setCategories] = useState([]);
     const [category,setCategory] = useState("");
+    const [cartitem,setCartitem]=useState([]);
     // console.log(children);
 
     useEffect(()=>{
@@ -71,7 +72,8 @@ export const ProductContextProvider = ({children}) =>{
         product,
         setProductId,
         categories,
-        setCategory
+        setCategory,
+        setCartitem
     };
 
     return (<ProductContext.Provider value={values}>{children}</ProductContext.Provider>);
